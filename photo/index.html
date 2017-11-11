@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ProgrammerWei</title>
+  <title>photo | ProgrammerWei</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java">
+  <meta name="description" content="&amp;lt;link type=&amp;quot;text/css&amp;quot; href=&amp;quot;/fancybox/jquery.fancybox.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;instagram&amp;quot;&amp;gt;&amp;lt;section class=&amp;quot;archives album&amp;quot;&amp;gt;">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ProgrammerWei">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:title" content="photo">
+<meta property="og:url" content="http://yoursite.com/photo/index.html">
 <meta property="og:site_name" content="ProgrammerWei">
-<meta property="og:description" content="Java">
+<meta property="og:description" content="&amp;lt;link type=&amp;quot;text/css&amp;quot; href=&amp;quot;/fancybox/jquery.fancybox.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;instagram&amp;quot;&amp;gt;&amp;lt;section class=&amp;quot;archives album&amp;quot;&amp;gt;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-11-11T10:45:17.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ProgrammerWei">
-<meta name="twitter:description" content="Java">
+<meta name="twitter:title" content="photo">
+<meta name="twitter:description" content="&amp;lt;link type=&amp;quot;text/css&amp;quot; href=&amp;quot;/fancybox/jquery.fancybox.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;instagram&amp;quot;&amp;gt;&amp;lt;section class=&amp;quot;archives album&amp;quot;&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="ProgrammerWei" type="application/atom+xml">
   
@@ -163,64 +164,127 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-用三个线程按顺序循环打印-abc-三个字母" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/10/用三个线程按顺序循环打印-abc-三个字母/">用三个线程按顺序循环打印 abc 三个字母</a>
+    <h1 class="article-title" itemprop="name">
+      photo
     </h1>
   
 
         
-        <a href="/2017/11/10/用三个线程按顺序循环打印-abc-三个字母/" class="archive-article-date">
-  	<time datetime="2017-11-10T12:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
+        <a href="/photo/index.html" class="archive-article-date">
+  	<time datetime="2017-11-11T10:24:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line">package <span class="built_in">test</span>;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.List;</div><div class="line">import java.util.concurrent.ExecutorService;</div><div class="line">import java.util.concurrent.Executors;</div><div class="line"></div><div class="line">public class Test &#123;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		Test t = new Test();</div><div class="line">		ExecutorService es = Executors.newCachedThreadPool();</div><div class="line">		List&lt;String&gt; list = new ArrayList&lt;String&gt;();</div><div class="line">		list.add(<span class="string">"a"</span>);</div><div class="line">		list.add(<span class="string">"b"</span>);</div><div class="line">		list.add(<span class="string">"c"</span>);</div><div class="line">		Lock lock = t.new Lock(list);</div><div class="line">		lock.list.forEach(e -&gt; es.execute(t.new MyPrint(lock, e, 100)));</div><div class="line">		es.shutdown();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	class Lock &#123;</div><div class="line">		List&lt;String&gt; list;</div><div class="line">		String str;</div><div class="line"></div><div class="line">		Lock(List&lt;String&gt; list) &#123;</div><div class="line">			this.list = list;</div><div class="line">			this.str = list.get(0);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	class MyPrint implements Runnable &#123;</div><div class="line">		String str;</div><div class="line">		Lock lock;</div><div class="line">		int loopNum;</div><div class="line">		final int num;</div><div class="line"></div><div class="line">		MyPrint(Lock lock, String str, int loopNum) &#123;</div><div class="line">			this.lock = lock;</div><div class="line">			this.str = str;</div><div class="line">			this.loopNum = loopNum;</div><div class="line">			num = lock.list.indexOf(str);</div><div class="line">		&#125;</div><div class="line">		@Override</div><div class="line">		public void <span class="function"><span class="title">run</span></span>() &#123;</div><div class="line">			synchronized (lock) &#123;</div><div class="line">				<span class="keyword">while</span> (<span class="literal">true</span>) &#123;</div><div class="line">					<span class="keyword">if</span> (lock.str.equals(str)) &#123;</div><div class="line">						System.out.println(str);</div><div class="line">						lock.str = (num + 1 == lock.list.size() ? lock.list.get(0) : lock.list.get(num + 1));</div><div class="line">						lock.notifyAll();</div><div class="line">						<span class="keyword">if</span> (loopNum-- == 0)</div><div class="line">							<span class="built_in">break</span>;</div><div class="line">					&#125; <span class="keyword">else</span> &#123;</div><div class="line">						try &#123;</div><div class="line">							lock.wait();</div><div class="line">						&#125; catch (InterruptedException e) &#123;</div><div class="line">							// TODO Auto-generated catch block</div><div class="line">							e.printStackTrace();</div><div class="line">						&#125;</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <pre><code>&lt;link type=&quot;text/css&quot; href=&quot;/fancybox/jquery.fancybox.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;div class=&quot;instagram&quot;&gt;&lt;section class=&quot;archives album&quot;&gt;&lt;ul class=&quot;img-box-ul&quot;&gt;&lt;/ul&gt;&lt;/section&gt;&lt;/div&gt;
+
+&lt;script src=&quot;/js/photo.js&quot;&gt;&lt;/script&gt;
+</code></pre><script>
+    if($(".instagram").length) {
+        require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+            obj.init();
+        });
+    }
+</script>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">多线程</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/用三个线程按顺序循环打印-abc-三个字母/">展开全文 >></a>
-        </p>
-      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/photo/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -240,85 +304,14 @@
 
 
 
-
   
-    <article id="post-list-group" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/04/list-group/">list group</a>
-    </h1>
   
 
-        
-        <a href="/2017/11/04/list-group/" class="archive-article-date">
-  	<time datetime="2017-11-04T12:41:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div></pre></td><td class="code"><pre><div class="line"> public class MyGroup &#123;</div><div class="line">	private final static Logger <span class="built_in">log</span> = Logger.getLogger(MyGroup.class);</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * 分组依据接口，用于集合分组时，获取分组依据</div><div class="line">	 * @author ZhangLiKun</div><div class="line">	 * @title GroupBy</div><div class="line">	 * @date 2013-4-23</div><div class="line">	 */</div><div class="line">	public interface GroupBy&lt;T&gt; &#123;</div><div class="line">		T groupby(Object obj);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	/**</div><div class="line">	 * </div><div class="line">	 * @param colls</div><div class="line">	 * @param gb</div><div class="line">	 * @<span class="built_in">return</span></div><div class="line">	 */</div><div class="line">	public static final &lt;T extends Comparable&lt;T&gt;, D&gt; Map&lt;T, List&lt;D&gt;&gt; group(</div><div class="line">			Collection&lt;D&gt; colls, GroupBy&lt;T&gt; gb) &#123;</div><div class="line">		<span class="keyword">if</span> (colls == null || colls.isEmpty()) &#123;</div><div class="line">			log.error(<span class="string">"分组集合不能为空!"</span>);</div><div class="line">			<span class="built_in">return</span> null;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (gb == null) &#123;</div><div class="line">			log.error(<span class="string">"分组依据接口不能为NUll!"</span>);</div><div class="line">			<span class="built_in">return</span> null;</div><div class="line">		&#125;</div><div class="line">		Iterator&lt;D&gt; iter = colls.iterator();</div><div class="line">		Map&lt;T, List&lt;D&gt;&gt; map = new HashMap&lt;T, List&lt;D&gt;&gt;();</div><div class="line">		<span class="keyword">while</span> (iter.hasNext()) &#123;</div><div class="line">			D d = iter.next();</div><div class="line">			T t = gb.groupby(d);</div><div class="line">			<span class="keyword">if</span> (map.containsKey(t)) &#123;</div><div class="line">				map.get(t).add(d);</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				List&lt;D&gt; list = new ArrayList&lt;D&gt;();</div><div class="line">				list.add(d);</div><div class="line">				map.put(t, list);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> map;</div><div class="line">	&#125;	</div><div class="line">	/*使用方法</div><div class="line">	// 进行分组</div><div class="line">	List&lt;OrderEntity&gt; orders = new ArrayList&lt;OrderEntity&gt;();</div><div class="line">	Map&lt;String, List&lt;OrderEntity&gt;&gt; map = MyGroup.group(orders,</div><div class="line">			new MyGroup.GroupBy&lt;String&gt;() &#123;</div><div class="line">				@Override</div><div class="line">				public String groupby(Object obj) &#123;</div><div class="line">					OrderEntity d = (OrderEntity) obj;</div><div class="line">					<span class="built_in">return</span> d.getSeller_name();</div><div class="line">				&#125;</div><div class="line">			&#125;);</div><div class="line">			</div><div class="line">		//遍历</div><div class="line">		Iterator iter = map.entrySet().iterator();</div><div class="line">		<span class="keyword">while</span> (iter.hasNext()) &#123;</div><div class="line">			Map.Entry entry = (Map.Entry) iter.next();</div><div class="line">			Object key = entry.getKey();</div><div class="line">			Object val = entry.getValue();	</div><div class="line">		&#125;</div><div class="line">	*/</div><div class="line">			</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">集合</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/04/list-group/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
+  
 
   
+
   
 
 
@@ -341,7 +334,7 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
 		isTag: false,
