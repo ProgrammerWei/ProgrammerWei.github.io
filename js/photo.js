@@ -19,7 +19,7 @@
                 for (var i = begin; i < end && i < data.length; i++) {
                     li += '<li><div class="img-box">' +
                         '<a class="img-bg" rel="example_group" href="https://github.com/ProgrammerWei/img/tree/master/blog/' + data[i] + '?raw=true"></a>' +
-                        '<img lazy-src="https://github.com/lwzhang/blog/blob/master/photos/' + data[i] + '?raw=true" />' +
+                        '<img lazy-src="https://github.com/ProgrammerWei/img/tree/master/blog/' + data[i] + '?raw=true" />' +
                         '</li>';
                 }
 
