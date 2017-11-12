@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content=",," />
+  <meta name="keywords" content="," />
 
 
 
@@ -79,18 +79,21 @@
 
 
 
-<meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
-<meta name="keywords" content="多线程,Java">
+<meta name="description" content="Java">
+<meta name="keywords" content="hexo">
 <meta property="og:type" content="website">
-<meta property="og:title" content="lock condition实现循环打印abc">
+<meta property="og:title" content="相册">
 <meta property="og:url" content="http://yoursite.com/photos/index.html">
 <meta property="og:site_name" content="ProgrammerWei">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta property="og:description" content="Java">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-11-12T10:46:41.989Z">
+<meta property="og:image" content="https://github.com/ProgrammerWei/img/raw/master/blog/乌云和白云.jpg">
+<meta property="og:image" content="https://github.com/ProgrammerWei/img/raw/master/blog/小路.jpg">
+<meta property="og:updated_time" content="2017-11-12T10:57:23.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lock condition实现循环打印abc">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
+<meta name="twitter:title" content="相册">
+<meta name="twitter:description" content="Java">
+<meta name="twitter:image" content="https://github.com/ProgrammerWei/img/raw/master/blog/乌云和白云.jpg">
 
 
 
@@ -126,7 +129,7 @@
 
 
 
-  <title>lock condition实现循环打印abc | ProgrammerWei</title>
+  <title>相册 | ProgrammerWei</title>
   
 
 
@@ -236,7 +239,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">lock condition实现循环打印abc</h1>
+	<h1 class="post-title" itemprop="name headline">相册</h1>
 
 
 
@@ -248,7 +251,7 @@
       <div class="post-body">
         
         
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div></pre></td><td class="code"><pre><div class="line">package <span class="built_in">test</span>;</div><div class="line"></div><div class="line">import java.util.ArrayList;</div><div class="line">import java.util.List;</div><div class="line">import java.util.concurrent.locks.Condition;</div><div class="line">import java.util.concurrent.locks.Lock;</div><div class="line">import java.util.concurrent.locks.ReentrantLock;</div><div class="line"></div><div class="line">public class Test &#123;</div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		List&lt;String&gt; list = new ArrayList&lt;String&gt;();</div><div class="line">		list.add(<span class="string">"a"</span>);</div><div class="line">		list.add(<span class="string">"b"</span>);</div><div class="line">		list.add(<span class="string">"c"</span>);</div><div class="line">		list.add(<span class="string">"d"</span>);</div><div class="line">		list.add(<span class="string">"e"</span>);</div><div class="line">		list.add(<span class="string">"f\n"</span>);</div><div class="line">		new Myprin(list, 50).run();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">class Myprin &#123;</div><div class="line">	private final Lock lock = new ReentrantLock();</div><div class="line">	int <span class="built_in">times</span>;</div><div class="line">	List&lt;MyMap&gt; maps = new ArrayList&lt;MyMap&gt;();</div><div class="line">	MyMap map;</div><div class="line">	String printStr;</div><div class="line">	int n = 1;</div><div class="line"></div><div class="line">	Myprin(List&lt;String&gt; list, int <span class="built_in">times</span>) &#123;</div><div class="line">		<span class="keyword">for</span> (String str : list) &#123;</div><div class="line">			map = new MyMap(str, lock.newCondition());</div><div class="line">			maps.add(map);</div><div class="line">		&#125;</div><div class="line">		printStr = list.get(0);</div><div class="line">		this.times = <span class="built_in">times</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	void <span class="function"><span class="title">run</span></span>() &#123;</div><div class="line">		<span class="keyword">for</span> (int i = 0; i &lt; maps.size() - 1; i++) &#123;</div><div class="line">			new Thread(</div><div class="line">					new Print(maps.get(i).condition, maps.get(i + 1).condition, maps.get(i).str, maps.get(i + 1).str))</div><div class="line">							.start();</div><div class="line">		&#125;</div><div class="line">		new Thread(new Print(maps.get(maps.size() - 1).condition, maps.get(0).condition, maps.get(maps.size() - 1).str,</div><div class="line">				maps.get(0).str)).start();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	class MyMap &#123;</div><div class="line">		String str;</div><div class="line">		Condition condition;</div><div class="line"></div><div class="line">		MyMap(String str, Condition condition) &#123;</div><div class="line">			this.str = str;</div><div class="line">			this.condition = condition;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	class Print implements Runnable &#123;</div><div class="line">		Condition thisCondition;</div><div class="line">		Condition nextCondition;</div><div class="line">		String thisStr;</div><div class="line">		String nestStr;</div><div class="line"></div><div class="line">		Print(Condition thisCondition, Condition nextCondition, String thisStr, String nestStr) &#123;</div><div class="line">			this.thisCondition = thisCondition;</div><div class="line">			this.nextCondition = nextCondition;</div><div class="line">			this.thisStr = thisStr;</div><div class="line">			this.nestStr = nestStr;</div><div class="line">			// System.out.println(<span class="string">"thisStr:"</span> + thisStr + <span class="string">",nestStr:"</span> + nestStr);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		@Override</div><div class="line">		public void <span class="function"><span class="title">run</span></span>() &#123;</div><div class="line">			<span class="keyword">while</span> (<span class="built_in">times</span> &gt; 0) &#123;</div><div class="line">				<span class="keyword">if</span> (printStr.equals(thisStr)) &#123;</div><div class="line">					lock.lock();</div><div class="line">					try &#123;</div><div class="line">						<span class="keyword">if</span> (thisStr.equals(maps.get(0).str)) &#123;</div><div class="line">							System.out.println(<span class="string">"第："</span> + n++ + <span class="string">"次打印"</span>);</div><div class="line">						&#125; <span class="keyword">else</span> <span class="keyword">if</span> (thisStr.equals(maps.get(maps.size() - 1).str)) &#123;</div><div class="line">							<span class="built_in">times</span>--;</div><div class="line">						&#125;</div><div class="line">						System.out.print(thisStr);</div><div class="line">						printStr = nestStr;</div><div class="line">						<span class="keyword">if</span> (<span class="built_in">times</span> == 0) &#123;</div><div class="line">							<span class="keyword">for</span> (MyMap map : maps) &#123;</div><div class="line">								map.condition.signalAll();</div><div class="line">							&#125;</div><div class="line">							<span class="built_in">break</span>;</div><div class="line">						&#125;</div><div class="line">						nextCondition.signalAll();</div><div class="line">						thisCondition.await();</div><div class="line">					&#125; catch (InterruptedException e) &#123;</div><div class="line">						// TODO Auto-generated catch block</div><div class="line">						e.printStackTrace();</div><div class="line">					&#125; finally &#123;</div><div class="line">						lock.unlock();</div><div class="line">					&#125;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
         
       </div>
       
