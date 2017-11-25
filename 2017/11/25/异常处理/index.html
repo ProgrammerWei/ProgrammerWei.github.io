@@ -79,16 +79,19 @@
 
 
 
-<meta name="description" content="Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ProgrammerWei">
-<meta property="og:url" content="http://yoursite.com/tags/集合/index.html">
+<meta name="description" content="刚换工作，做的项目动不动就报500异常页面，红彤彤的。看下controller，很多很多代码，但是try catch很少，if else也少。首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。除了友好、健壮，保存错误日志，还">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异常处理">
+<meta property="og:url" content="http://yoursite.com/2017/11/25/异常处理/index.html">
 <meta property="og:site_name" content="ProgrammerWei">
-<meta property="og:description" content="Java">
+<meta property="og:description" content="刚换工作，做的项目动不动就报500异常页面，红彤彤的。看下controller，很多很多代码，但是try catch很少，if else也少。首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。除了友好、健壮，保存错误日志，还">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png">
+<meta property="og:updated_time" content="2017-11-25T13:01:25.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ProgrammerWei">
-<meta name="twitter:description" content="Java">
+<meta name="twitter:title" content="异常处理">
+<meta name="twitter:description" content="刚换工作，做的项目动不动就报500异常页面，红彤彤的。看下controller，很多很多代码，但是try catch很少，if else也少。首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。除了友好、健壮，保存错误日志，还">
+<meta name="twitter:image" content="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png">
 
 
 
@@ -118,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/集合/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/11/25/异常处理/"/>
 
 
 
 
 
-  <title>Tag: 集合 | ProgrammerWei</title>
+  <title>异常处理 | ProgrammerWei</title>
   
 
 
@@ -143,7 +146,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -227,54 +230,143 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>集合<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/异常处理/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ProgrammerWei">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/11/04/list-group/" itemprop="url">
-              
-                <span itemprop="name">list group</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">异常处理</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-04T20:41:32+08:00"
-              content="2017-11-04" >
-          11-04
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posté le</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-25T17:15:42+08:00">
+                2017-11-25
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>刚换工作，做的项目动不动就报500异常页面，红彤彤的。<br>看下controller，很多很多代码，但是try catch很少，if else也少。<br>首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。<br>然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。<br>除了友好、健壮，保存错误日志，还可以帮助事后分析、补救。<br>现在整理下java异常处理。<br><img src="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png" alt="java异常"><br>通常程序关心的异常是从 java.lang.Exception 类继承的子类。<br>Throwable有两个子类Exception、Error。<br>Error是运行环境错误，程序员可以说不是我的责任，但是递归很有可能导致StackOverFlowError,OutOfMemoryError可以通过增加内存分配解决。<br>Exception 包括Checked Exception和RuntimeException。<br>Checked Exception指无法通过优化代码避免的异常或根本不是代码的问题，但是有补救可能。Java强制程序员考虑这些情况，提高代码质量。<br>RuntimeException指可以通过提高代码质量避免的问题，如NullPointerException、IllegalArgumentException、ArithmeticException等。<br>还有就是通过自定义异常控制业务流程，比较有争议。</p>
+<p>异常处理原则：<br>具体明确<br>尽早抛出或处理<br>延迟捕获</p>
+<p>在合适的层面捕获异常，让程序可以从异常中有意义地恢复并继续运行，而不是无谓的将错就错；或者把专业代码信息转换成明确易懂的自然语言展示给用户。<br>最不该做的就是什么都不做。如果不知道怎么处理就不要catch，丢失、扰乱异常信息。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/12/lock-condition实现循环打印abc/" rel="next" title="lock condition实现循环打印abc">
+                <i class="fa fa-chevron-left"></i> lock condition实现循环打印abc
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -282,6 +374,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -500,6 +596,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

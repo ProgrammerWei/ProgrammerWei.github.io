@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -195,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -242,6 +242,128 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/异常处理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/head.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ProgrammerWei">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/25/异常处理/" itemprop="url">异常处理</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posté le</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-25T17:15:42+08:00">
+                2017-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>刚换工作，做的项目动不动就报500异常页面，红彤彤的。<br>看下controller，很多很多代码，但是try catch很少，if else也少。<br>首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。<br>然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。<br>除了友好、健壮，保存错误日志，还可以帮助事后分析、补救。<br>现在整理下java异常处理。<br><img src="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png" alt="java异常"><br>通常程序关心的异常是从 java.lang.Exception 类继承的子类。<br>Throwable有两个子类Exception、Error。<br>Error是运行环境错误，程序员可以说不是我的责任，但是递归很有可能导致StackOverFlowError,OutOfMemoryError可以通过增加内存分配解决。<br>Exception 包括Checked Exception和RuntimeException。<br>Checked Exception指无法通过优化代码避免的异常或根本不是代码的问题，但是有补救可能。Java强制程序员考虑这些情况，提高代码质量。<br>RuntimeException指可以通过提高代码质量避免的问题，如NullPointerException、IllegalArgumentException、ArithmeticException等。<br>还有就是通过自定义异常控制业务流程，比较有争议。</p>
+<p>异常处理原则：<br>具体明确<br>尽早抛出或处理<br>延迟捕获</p>
+<p>在合适的层面捕获异常，让程序可以从异常中有意义地恢复并继续运行，而不是无谓的将错就错；或者把专业代码信息转换成明确易懂的自然语言展示给用户。<br>最不该做的就是什么都不做。如果不知道怎么处理就不要catch，丢失、扰乱异常信息。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/12/lock-condition实现循环打印abc/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -271,7 +393,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T18:10:56+08:00">
                 2017-11-12
@@ -390,7 +512,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-10T20:41:32+08:00">
                 2017-11-10
@@ -509,7 +631,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-04T20:41:32+08:00">
                 2017-11-04
@@ -636,8 +758,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -650,7 +772,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -698,7 +820,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -706,7 +828,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
 
 
 
