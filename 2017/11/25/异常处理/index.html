@@ -87,7 +87,7 @@
 <meta property="og:description" content="刚换工作，做的项目动不动就报500异常页面，红彤彤的。看下controller，很多很多代码，但是try catch很少，if else也少。首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。最后架构师通宵帮我调接口，发现是乱码，加了“UTF-8”就好了。然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png">
-<meta property="og:updated_time" content="2017-11-25T13:06:50.082Z">
+<meta property="og:updated_time" content="2017-12-03T11:17:07.524Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="异常处理">
 <meta name="twitter:description" content="刚换工作，做的项目动不动就报500异常页面，红彤彤的。看下controller，很多很多代码，但是try catch很少，if else也少。首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。最后架构师通宵帮我调接口，发现是乱码，加了“UTF-8”就好了。然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处">
@@ -187,7 +187,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -271,7 +271,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-25T17:15:42+08:00">
                 2017-11-25
@@ -311,7 +311,13 @@
       
 
       
-        <p>刚换工作，做的项目动不动就报500异常页面，红彤彤的。<br>看下controller，很多很多代码，但是try catch很少，if else也少。<br>首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。最后架构师通宵帮我调接口，发现是乱码，加了“UTF-8”就好了。<br>然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。<br>除了友好、健壮，保存错误日志，还可以帮助事后分析、补救。<br>现在整理下java异常处理。<br><img src="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png" alt="java异常"><br>通常程序关心的异常是从 java.lang.Exception 类继承的子类。<br>Throwable有两个子类Exception、Error。<br>Error是运行环境错误，程序员可以说不是我的责任，但是递归很有可能导致StackOverFlowError,OutOfMemoryError可以通过增加内存分配解决。<br>Exception 包括Checked Exception和RuntimeException。<br>Checked Exception指无法通过优化代码避免的异常或根本不是代码的问题，但是有补救可能。Java强制程序员考虑这些情况，提高代码质量。<br>RuntimeException指可以通过提高代码质量避免的问题，如NullPointerException、IllegalArgumentException、ArithmeticException等。<br>还有就是通过自定义异常控制业务流程，比较有争议。</p>
+        <p>刚换工作，做的项目动不动就报500异常页面，红彤彤的。<br>看下controller，很多很多代码，但是try catch很少，if else也少。<br>首先站在使用者角度看，不友好。想起了曾经外派，调一个同事的接口，调不通，只返回失败，到底什么问题，一点提示都没有。最后架构师通宵帮我调接口，发现是乱码，加了“UTF-8”就好了。<br>然后就是感觉系统不健壮，动不动就500，动不动就500，一个可以if else处理的空指针也理直气壮的报500。<br>现在整理下java异常处理。<br>使用异常机制它能够降低错误处理代码的复杂度，如果不使用异常，那么就必须检查特定的错误，并在程序中的许多地方去处理它，而如果使用异常，那就不必在方法调用处进行检查，因为异常机制将保证能够捕获这个错误，并且，只需在一个地方处理错误，即所谓的异常处理程序中。这种方式不仅节约代码，而且把“概述在正常执行过程中做什么事”的代码和“出了问题怎么办”的代码相分离。总之，与以前的错误处理方法相比，异常机制使代码的阅读、编写和调试工作更加井井有条。（摘自《Think in java 》）。<br>1、异常情形是指：阻止当前方法或作用域继续执行的问题。异常情形和普通问题不一样，普通问题指在编写代码的时候就已经提示的错误。当异常出现的时候，将使用new在堆上创建异常对象，当前的执行路径被终止，并且在当前环境中弹出异常对象的引用，由异常处理机制接管程序。</p>
+<p>2、异常处理的好处?<br>异常处理是Java中唯一正式的错误报告机制，并且通过编译器强制执行，它能使错误代码变得更有条理，而且把“描述做什么事的代码”和“出了问题怎么办的代码”相分离。异常处理是被设计用来处理一些烦人的运行期错误，这些错误是由你的代码控制能力之外的因素导致的。</p>
+<p>3、异常处理理论上有两种基本模型。一种是终止模型: 一旦异常被抛出，就表明错误已无法挽回，也不能回来继续执行。一种是恢复模型:异常处理程序的工作是修正错误，然后重新尝试调用出问题的方法，并认为第二次能成功。（现在基本都使用终止模型）</p>
+<p>4、异常类的信息方法<br>String getMessage(); 获取详细信息<br>String getLocalizedMessage(); 获取本地语言表述的详细信息<br>String toString() ; 返回简单描述，要是有详细信息的话，也会包括在内<br>void printStackTrace(java.io.printWriter);  打印Throwable 和 Throwable的调用栈轨迹。调用栈显示了”把你带到异常抛出地点”的方法调用序列、<br>Throwable fillInStackTrace(); 用于在Throwable对象的内部记录栈框架的当前状态</p>
+<p>5、异常链:你如果想要在捕获一个异常然后抛出另一个异常，并且希望把原始异常的信息保存下来，这就称为”异常链”。在Throwable的子类中，只有三种基本的异常类提供了带cause的构造器。他们是Error、Exception以及RuntimeException。如果你要把其他类型的异常链接起来，你应该用initCause()方法而不是构造器。<br>public Throwable initCause(Throwable cause)<br>将此 throwable 的 cause 初始化为指定值。（该 Cause 是导致抛出此 throwable 的throwable。）</p>
+<p>6、自定义异常类：需要继承Exception类。Exception继承自Throwable，Throwable可以分为两种类型:Error用来表示你不用关心的编译期和系统错误；Exception是可以被抛出的基本类型。</p>
+<p>7、finally：对于一些代码，你可能希望无论try块中的异常是否抛出，他们都能得到执行。通常适用于内存回收之外的情况。<br><img src="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png" alt="java异常"><br>通常程序关心的异常是从 java.lang.Exception 类继承的子类。<br>Throwable有两个子类Exception、Error。<br>Error是运行环境错误，程序员可以说不是我的责任，但是递归很有可能导致StackOverFlowError,OutOfMemoryError可以通过增加内存分配解决。<br>Exception 包括Checked Exception和RuntimeException。<br>Checked Exception指无法通过优化代码避免的异常或根本不是代码的问题，但是有补救可能。Java强制程序员考虑这些情况，提高代码质量。<br>RuntimeException指可以通过提高代码质量避免的问题，如NullPointerException、IllegalArgumentException、ArithmeticException等。<br>还有就是通过自定义异常控制业务流程，比较有争议。</p>
 <p>异常处理原则：<br>具体明确<br>尽早抛出或处理<br>延迟捕获</p>
 <p>在合适的层面捕获异常，让程序可以从异常中有意义地恢复并继续运行，而不是无谓的将错就错；或者把专业代码信息转换成明确易懂的自然语言展示给用户。<br>最不该做的就是什么都不做。如果不知道怎么处理就不要catch，丢失、扰乱异常信息。</p>
 
@@ -347,6 +353,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/03/Java-8-lambda/" rel="prev" title="Java 8 lambda">
+                Java 8 lambda <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -418,8 +428,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -432,7 +442,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -480,7 +490,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
