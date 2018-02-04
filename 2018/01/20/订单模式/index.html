@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。在此总结自己的状态模式要点：1、理清各种状态特点，划分拐点，分类处理2、过期、取消状态特殊处理3、建立状态变更日志表4、计算、修改下个影响状态变更的时间提前保存5、用状态当作version，乐观锁处理并发访问另外针对订单建立支付日志表。">
+<meta name="description" content="现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。在此总结自己的状态模式要点：1、理清各种状态特点，划分拐点，分类处理2、过期、取消状态特殊处理3、建立状态变更日志表4、计算、修改下个影响状态变更的时间提前保存5、用状态当作version，乐观锁处理并发访问另外针对订单建立支付日志表。确定的加字段，不确定并且很多的加记录。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="状态模式">
-<meta property="og:url" content="http://yoursite.com/2018/01/20/状态模式/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/01/20/订单模式/index.html">
 <meta property="og:site_name" content="ProgrammerWei">
-<meta property="og:description" content="现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。在此总结自己的状态模式要点：1、理清各种状态特点，划分拐点，分类处理2、过期、取消状态特殊处理3、建立状态变更日志表4、计算、修改下个影响状态变更的时间提前保存5、用状态当作version，乐观锁处理并发访问另外针对订单建立支付日志表。">
+<meta property="og:description" content="现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。在此总结自己的状态模式要点：1、理清各种状态特点，划分拐点，分类处理2、过期、取消状态特殊处理3、建立状态变更日志表4、计算、修改下个影响状态变更的时间提前保存5、用状态当作version，乐观锁处理并发访问另外针对订单建立支付日志表。确定的加字段，不确定并且很多的加记录。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-20T08:25:08.902Z">
+<meta property="og:updated_time" content="2018-02-04T06:57:36.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="状态模式">
-<meta name="twitter:description" content="现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。在此总结自己的状态模式要点：1、理清各种状态特点，划分拐点，分类处理2、过期、取消状态特殊处理3、建立状态变更日志表4、计算、修改下个影响状态变更的时间提前保存5、用状态当作version，乐观锁处理并发访问另外针对订单建立支付日志表。">
+<meta name="twitter:description" content="现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。在此总结自己的状态模式要点：1、理清各种状态特点，划分拐点，分类处理2、过期、取消状态特殊处理3、建立状态变更日志表4、计算、修改下个影响状态变更的时间提前保存5、用状态当作version，乐观锁处理并发访问另外针对订单建立支付日志表。确定的加字段，不确定并且很多的加记录。">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/20/状态模式/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/20/订单模式/"/>
 
 
 
@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -195,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -242,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/状态模式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/订单模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wei">
@@ -269,7 +269,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T15:26:02+08:00">
                 2018-01-20
@@ -309,7 +309,7 @@
       
 
       
-        <p>现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。<br>在此总结自己的状态模式要点：<br>1、理清各种状态特点，划分拐点，分类处理<br>2、过期、取消状态特殊处理<br>3、建立状态变更日志表<br>4、计算、修改下个影响状态变更的时间提前保存<br>5、用状态当作version，乐观锁处理并发访问<br>另外针对订单建立支付日志表。</p>
+        <p>现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。<br>在此总结自己的状态模式要点：<br>1、理清各种状态特点，划分拐点，分类处理<br>2、过期、取消状态特殊处理<br>3、建立状态变更日志表<br>4、计算、修改下个影响状态变更的时间提前保存<br>5、用状态当作version，乐观锁处理并发访问<br>另外针对订单建立支付日志表。<br>确定的加字段，不确定并且很多的加记录。</p>
 
       
     </div>
@@ -419,7 +419,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -432,7 +432,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -480,7 +480,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -488,7 +488,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
 
 
 

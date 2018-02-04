@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -195,7 +195,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -271,7 +271,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T14:17:39+08:00">
                 2018-01-21
@@ -314,7 +314,7 @@
         
           
             <h2 id="1、下载hadoop"><a href="#1、下载hadoop" class="headerlink" title="1、下载hadoop"></a>1、下载hadoop</h2><p>地址：<a href="http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.0.0/" target="_blank" rel="external">http://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.0.0/</a><br>解压。</p>
-<h2 id="2、下载windows环境文件"><a href="#2、下载windows环境文件" class="headerlink" title="2、下载windows环境文件"></a>2、下载windows环境文件</h2><p>地址：<a href="http://download.csdn.net/download/u010934981/10216554" target="_blank" rel="external">http://download.csdn.net/download/u010934981/10216554</a><br>覆盖hadoop-3.0.0\bin，并将hadoop.dll复制一份到c:/windows/System32。</p>
+<h2 id="2、下载windows环境文件"><a href="#2、下载windows环境文件" class="headerlink" title="2、下载windows环境文件"></a>2、下载windows环境文件</h2><p>地址：<a href="https://github.com/steveloughran/winutils" target="_blank" rel="external">https://github.com/steveloughran/winutils</a><br>覆盖hadoop-3.0.0\bin，并将hadoop.dll复制一份到c:/windows/System32。</p>
 <h2 id="3、配置hadoop环境变量"><a href="#3、配置hadoop环境变量" class="headerlink" title="3、配置hadoop环境变量"></a>3、配置hadoop环境变量</h2><p>创建HADOOP_HOME，在Path下添加 %HADOOP_HOME%\bin</p>
 <h2 id="4、hadoop-3-0-0-etc-hadoop-目录下依次修改："><a href="#4、hadoop-3-0-0-etc-hadoop-目录下依次修改：" class="headerlink" title="4、hadoop-3.0.0\etc\hadoop 目录下依次修改："></a>4、hadoop-3.0.0\etc\hadoop 目录下依次修改：</h2><p>core-site.xml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">    &lt;property&gt;</div><div class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</div><div class="line">        &lt;value&gt;hdfs://localhost:9000&lt;/value&gt;</div><div class="line">    &lt;/property&gt;    </div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
 <p>hdfs-site.xml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;configuration&gt;</div><div class="line">    &lt;property&gt;</div><div class="line">        &lt;name&gt;dfs.replication&lt;/name&gt;</div><div class="line">        &lt;value&gt;1&lt;/value&gt;</div><div class="line">    &lt;/property&gt;</div><div class="line">    &lt;property&gt;    </div><div class="line">        &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;    </div><div class="line">        &lt;value&gt;file:/hadoop/data/dfs/namenode&lt;/value&gt;    </div><div class="line">    &lt;/property&gt;    </div><div class="line">    &lt;property&gt;    </div><div class="line">        &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;    </div><div class="line">        &lt;value&gt;file:/hadoop/data/dfs/datanode&lt;/value&gt;  </div><div class="line">    &lt;/property&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure></p>
@@ -369,7 +369,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/状态模式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/20/订单模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wei">
@@ -388,7 +388,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/20/状态模式/" itemprop="url">状态模式</a></h1>
+                <a class="post-title-link" href="/2018/01/20/订单模式/" itemprop="url">状态模式</a></h1>
         
 
         <div class="post-meta">
@@ -398,7 +398,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T15:26:02+08:00">
                 2018-01-20
@@ -440,7 +440,7 @@
       
         
           
-            <p>现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。<br>在此总结自己的状态模式要点：<br>1、理清各种状态特点，划分拐点，分类处理<br>2、过期、取消状态特殊处理<br>3、建立状态变更日志表<br>4、计算、修改下个影响状态变更的时间提前保存<br>5、用状态当作version，乐观锁处理并发访问<br>另外针对订单建立支付日志表。</p>
+            <p>现在在做一个电子商务系统的订单模块，其中最关键的是订单的状态，从流程图上划分了三大类，最多的一类有30多种状态。<br>在此总结自己的状态模式要点：<br>1、理清各种状态特点，划分拐点，分类处理<br>2、过期、取消状态特殊处理<br>3、建立状态变更日志表<br>4、计算、修改下个影响状态变更的时间提前保存<br>5、用状态当作version，乐观锁处理并发访问<br>另外针对订单建立支付日志表。<br>确定的加字段，不确定并且很多的加记录。</p>
 
           
         
@@ -518,7 +518,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-03T19:08:51+08:00">
                 2017-12-03
@@ -640,7 +640,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-25T17:15:42+08:00">
                 2017-11-25
@@ -768,7 +768,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T18:10:56+08:00">
                 2017-11-12
@@ -900,7 +900,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">articles</span>
                 </a>
               </div>
             
@@ -913,7 +913,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -961,7 +961,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -969,7 +969,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
 
 
 
