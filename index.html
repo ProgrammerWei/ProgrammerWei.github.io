@@ -185,7 +185,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Accueil
+            Home
           </a>
         </li>
       
@@ -271,7 +271,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-21T14:17:39+08:00">
                 2018-01-21
@@ -398,7 +398,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-20T15:26:02+08:00">
                 2018-01-20
@@ -518,7 +518,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-03T19:08:51+08:00">
                 2017-12-03
@@ -640,7 +640,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-25T17:15:42+08:00">
                 2017-11-25
@@ -691,6 +691,16 @@
 <p>7、finally：对于一些代码，你可能希望无论try块中的异常是否抛出，他们都能得到执行。通常适用于内存回收之外的情况。<br><img src="http://www.runoob.com/wp-content/uploads/2017/09/690102-20160728164909622-1770558953.png" alt="java异常"><br>通常程序关心的异常是从 java.lang.Exception 类继承的子类。<br>Throwable有两个子类Exception、Error。<br>Error是运行环境错误，程序员可以说不是我的责任，但是递归很有可能导致StackOverFlowError,OutOfMemoryError可以通过增加内存分配解决。<br>Exception 包括Checked Exception和RuntimeException。<br>Checked Exception指无法通过优化代码避免的异常或根本不是代码的问题，但是有补救可能。Java强制程序员考虑这些情况，提高代码质量。<br>RuntimeException指可以通过提高代码质量避免的问题，如NullPointerException、IllegalArgumentException、ArithmeticException等。<br>还有就是通过自定义异常控制业务流程，比较有争议。</p>
 <p>异常处理原则：<br>具体明确<br>尽早抛出或处理<br>延迟捕获</p>
 <p>在合适的层面捕获异常，让程序可以从异常中有意义地恢复并继续运行，而不是无谓的将错就错；或者把专业代码信息转换成明确易懂的自然语言展示给用户。<br>最不该做的就是什么都不做。如果不知道怎么处理就不要catch，丢失、扰乱异常信息。</p>
+<p>《Effective Java》中对异常的使用给出了以下指导原则：</p>
+<ul>
+<li>不要将异常处理用于正常的控制流（设计良好的API不应该强迫它的调用者为了正常的控制流而使用异常）</li>
+<li>对可以恢复的情况使用受检异常，对编程错误使用运行时异常</li>
+<li>避免不必要的使用受检异常（可以通过一些状态检测手段来避免异常的发生）</li>
+<li>优先使用标准的异常</li>
+<li>每个方法抛出的异常都要有文档</li>
+<li>保持异常的原子性</li>
+<li>不要在catch中忽略掉捕获到的异常</li>
+</ul>
 
           
         
@@ -768,7 +778,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posté le</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-12T18:10:56+08:00">
                 2017-11-12
@@ -900,7 +910,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">articles</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -969,7 +979,7 @@
 
 
 
-  <div class="theme-info">Thème &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
 
 
 
